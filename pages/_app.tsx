@@ -1,7 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app';
 import awsconfig from '../components/aws-exports'; // Note: Update this import path if required.
-import React, { useState } from 'react';
 import Amplify from "@aws-amplify/core";
 
 
