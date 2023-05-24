@@ -17,8 +17,8 @@ export default function Home() {
               Join to discuss and discover the potential of decentralized finance
             </p>
             <div className="flex justify-center space-x-5">
-              <a href="/register" className="px-4 py-2 font-semibold text-purple-700 bg-white rounded">Register</a>
-              <a href="/login" className="px-4 py-2 font-semibold text-white border border-white rounded">Login</a>
+            <Link href="/register" className="px-4 py-2 font-semibold text-purple-700 bg-white rounded">Register</Link>
+            <Link href="/login" className="px-4 py-2 font-semibold text-white border border-white rounded">Login</Link>
             </div>
           </div>
         </section>
