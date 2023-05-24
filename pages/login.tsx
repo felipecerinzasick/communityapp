@@ -14,9 +14,8 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-
     const authenticationDetails = new AuthenticationDetails({
       Username: username,
       Password: password,

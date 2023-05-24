@@ -14,8 +14,9 @@ const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+
 
     const attributeList = [
       new CognitoUserAttribute({
@@ -24,13 +25,15 @@ const Register = () => {
       }),
     ];
 
-    userPool.signUp(username, password, attributeList, null, (err, result) => {
+    userPool.signUp(username, password, attributeList, [], (err, result) => {
       if (err) {
         console.error(err);
         return;
       }
 
-      console.log(`user name is ${result.user.getUsername()}`);
+      if (result?.user) {
+    console.log(`user name is ${result.user.getUsername()}`);
+  }
     });
   };
 
