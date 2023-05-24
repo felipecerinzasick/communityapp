@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CognitoUserPool, CognitoUserAttribute } from 'amazon-cognito-identity-js';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 const poolData = {
   UserPoolId: 'ca-central-1_bcg1vJujy',
