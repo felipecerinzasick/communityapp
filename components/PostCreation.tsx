@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-const PostCreation = ({ threadId }) => {
+interface PostCreationProps {
+  threadId: string;  // Assuming threadId is a string, update the type as needed
+}
+
+const PostCreation: React.FC<PostCreationProps> = ({ threadId }) => { 
   const [content, setContent] = useState('');
 
   const handleSubmit = (e) => {
