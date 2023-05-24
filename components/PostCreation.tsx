@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 
 interface PostCreationProps {
   threadId: string;  // Assuming threadId is a string, update the type as needed
 }
 
-const PostCreation: React.FC<PostCreationProps> = ({ threadId }) => { 
+const PostCreation: React.FC<PostCreationProps> = ({ threadId }) => {
   const [content, setContent] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
     // Call an API or function to create the new post here using `content` and `threadId`
